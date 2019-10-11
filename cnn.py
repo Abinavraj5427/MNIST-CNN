@@ -1,7 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mnist.loader import MNIST
+import mnist
+import scipy.misc
 
-mnist = MNIST('./dataset/MNIST')
-x_train, y_train = mnist.load_training() #60000 samples
-x_test, y_test = mnist.load_testing()    #10000 samples
+X_train = mnist.train_images()
+Y_train = mnist.train_labels()
+
+scipy.misc.toimage(scipy.misc.imresize(X_train[0,:,:] * -1 + 256, 10.))
+
+X_test = mnist.test_images()
+Y_test = mnist.test_labels()
+
+
+
+
+
