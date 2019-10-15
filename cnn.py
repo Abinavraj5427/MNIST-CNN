@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 import mnist
 
 def convolution(X, F, step_size):
-    return X
+    for r in range(28):
+        for c in range(28):
+            
 
 
 #60000 samples
