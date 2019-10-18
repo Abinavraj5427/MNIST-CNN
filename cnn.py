@@ -8,7 +8,7 @@ def convolution(X, F, step_size):
         for c in range(28-(F.shape[1]-1)):
             C[:,r,c] = (X[:,r:r+F.shape[0],c:c+F.shape[1]] * F).sum()
     return C
-            
+       
 
 
 #60000 samples
